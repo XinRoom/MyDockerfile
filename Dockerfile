@@ -74,8 +74,9 @@ ARG _RESTY_CONFIG_DEPS="--with-openssl=/tmp/openssl-${RESTY_OPENSSL_VERSION} --w
 # 3) Build OpenResty
 # 4) Cleanup
 
-RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main/" > /etc/apk/repositories \
-    && apk add --no-cache --virtual .build-deps \
+# echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.8/main/" > /etc/apk/repositories \
+ 
+RUN apk add --no-cache --virtual .build-deps \
         build-base \
         curl \
         gd-dev \

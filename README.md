@@ -1,7 +1,12 @@
-# openresty
+# Nextcloud php-fpm-alpine
 
-Dockerfile - alpine
-https://github.com/openresty/docker-openresty
+Can diy nextcloud_path
 
-Add TLSv3,ngx_cache_purge,ngx_brotli
-https://github.com/XinRoom/MyDockerfile
+`ENV NEXTCLOUD_PATH="/var/www"`
+
+Under ubuntu, the www-data user uid is 33.  
+Under alpine, the www-data user uid is 82.  
+And under alpine, xfs user uid is 33.  
+
+For unity into ubuntu, under alpine, www-data users are replaced by xfs.  
+If you have no other use for xfs!  
